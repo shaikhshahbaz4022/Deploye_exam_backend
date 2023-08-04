@@ -16,6 +16,9 @@ app.use(auth)
 app.use("/exam", QuestionRouter)
 app.use("/admin", AdminRouter)
 
+app.get("/", (req, res) => {
+    res.send("Home Route")
+})
 
 app.listen(PORT, async () => {
     try {
